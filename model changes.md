@@ -14,3 +14,11 @@
         }
         return false;
     }
+    ##
+    # Add this function 
+    
+    ##public function get_user_databyemail($mail)
+    {
+        $query = $this->db->query("SELECT * FROM `user_details` WHERE `user_email`='".$mail."'");
+        return $query->result();   
+    }
